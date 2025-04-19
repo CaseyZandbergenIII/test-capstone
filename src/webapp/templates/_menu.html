@@ -1,0 +1,16 @@
+<div class="nav">
+  <a href="/" class='{{ "active" if request.path == "/" else "" }}'>Home</a>
+  <a
+    href="/convert"
+    class='{{ "active" if request.path == "/convert" else "" }}'
+    >Convert</a
+  >
+  <a
+    href="/analyze"
+    class='{{ "active" if request.path == "/analyze" else "" }}'
+    >Analyze</a
+  >
+  <a href="/info" class='{{ "active" if request.path == "/info" else "" }}'
+    >Documentation</a
+  >
+</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSAE Competition Analyzer</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </head>
+  <body>
+    <div class="page-title">
+      <div class="page-title-heading" onclick="goTo('/')">FSAE Analyzer</div>
+      {% include "_menu.html" %}
+    </div>
+    <div class="info-section">
+      <section class="how_section layout_padding">
+        <div class="heading_container">
+          <h2>Analysis Options</h2>
+        </div>
+        <div class="how_container">
+          <div class="box" onclick="goTo('/convert')">
+            <div class="img-box">
+              <img
+                src="{{ url_for('static', filename='imgs/convert-download.png') }}"
+                alt="File Not Found"
+              />
+            </div>
+            <div class="detail-box">
+              <h5>Convert and Download</h5>
+              <p>
+                Upload FSAE competition result PDF(s), converting them to
+                CSV(s). If multiple PDFs are uploaded, they will be merged into
+                one CSV. The CSV will be downloaded to your device's downloads
+                folder. The CSV will distinguish each event and year for proper
+                analysis.
+              </p>
+            </div>
+          </div>
+          <div class="box" onclick="goTo('/analyze')">
+            <div class="img-box">
+              <img
+                src="{{ url_for('static', filename='imgs/convert-analyze.png') }}"
+                alt="File Not Found"
+              />
+            </div>
+            <div class="detail-box">
+              <h5>Convert and Analyze</h5>
+              <p>
+                Upload FSAE competition result PDF(s) to be analyzed. You will
+                have the option to download the results as a CSV formatted for
+                proper analysis. The results will also be displayed on the
+                website for analysis.
+              </p>
+            </div>
+          </div>
+          <div class="box" onclick="goTo('/')">
+            <div class="img-box">
+              <img
+                src="{{ url_for('static', filename='imgs/coming-soon.png') }}"
+                alt="File Not Found"
+              />
+            </div>
+            <div class="detail-box">
+              <h5>Coming Soon!</h5>
+              <p>New features coming soon!</p>
+            </div>
+          </div>
+        </div>
+        <div class="read-more-box">
+          <div class="read-more" onclick="goTo('info')">Read More</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

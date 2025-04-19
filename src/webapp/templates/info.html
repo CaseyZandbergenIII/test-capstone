@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info FSAE Data</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </head>
+  <body>
+    <div class="page-title">
+      <div class="page-title-heading" onclick="goTo('/')">FSAE Analyzer</div>
+      {%include "_menu.html"%}
+    </div>
+
+    <main class="info-content layout_padding">
+      <section class="info-section">
+        <h2>Documentation</h2>
+        <p>
+          Welcome to the <strong>FSAE Competition Analyzer</strong>! This tool
+          is designed to help teams, judges, and enthusiasts analyze and extract
+          insights from FSAE competition result PDFs. Below, you'll find
+          detailed explanations of the key features offered by the platform.
+        </p>
+      </section>
+
+      <section class="info-section">
+        <h3>📄 Convert and Download</h3>
+        <p>
+          <strong>Purpose:</strong><br />
+          Transform official FSAE competition result PDFs into structured CSV
+          files for your own records or further offline analysis.
+        </p>
+        <ul>
+          <li>Upload <strong>single or multiple</strong> FSAE PDF files.</li>
+          <li>System converts each PDF and merges them if needed.</li>
+          <li>Final CSV automatically downloaded to your device.</li>
+          <li>Results organized by <strong>event and year</strong>.</li>
+        </ul>
+        <p>
+          <strong>Ideal for:</strong> Teams building performance databases or
+          analyzing trends over multiple years.
+        </p>
+      </section>
+
+      <section class="info-section">
+        <h3>📊 Convert and Analyze</h3>
+        <p>
+          <strong>Purpose:</strong><br />
+          Extract results from PDF files and
+          <strong>view insights directly on the website</strong>.
+        </p>
+        <ul>
+          <li>Upload PDFs and view results on the platform.</li>
+          <li>
+            Tabular views and summaries of rankings, penalties, scores, etc.
+          </li>
+          <li>Download cleaned CSV files for deeper analysis.</li>
+          <li>Perfect for quick team comparisons and anomaly spotting.</li>
+        </ul>
+        <p>
+          <strong>Ideal for:</strong> Anyone who wants to interactively analyze
+          results without downloading first.
+        </p>
+      </section>
+
+      <section class="info-section">
+        <h3>🔄 PDF Upload Guidelines</h3>
+        <ul>
+          <li>
+            Only <strong>official FSAE result PDFs</strong> are supported.
+          </li>
+          <li>
+            No scanned or handwritten documents — text extraction is required.
+          </li>
+          <li>
+            For best results, use files from the official FSAE site or
+            competition organizers.
+          </li>
+        </ul>
+      </section>
+
+      <section class="info-section">
+        <h3>🚀 Coming Soon</h3>
+        <ul>
+          <li>
+            Graphical analytics (charts, trends over time, team progress).
+          </li>
+          <li>Search and filter across years or events.</li>
+          <li>Team profiles and comparative dashboards.</li>
+          <li>Cleaner parsing of older, inconsistent PDF formats.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
